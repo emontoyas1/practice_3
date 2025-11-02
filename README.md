@@ -38,7 +38,7 @@ Este proyecto fue desarrollado como parte de la práctica final de la asignatura
 ```
 2r3k1/p3bqp1/Q2p3p/3Pp3/P3C3/8/5PPP/5RK1 b - - 1 27
 ```
-(Error: carácter inválido 'C' en la fila)
+el error esta en que 'C' no es un caracter valido para la cadena FEN de este progama
 
 
 ## Lista de FEN de prueba
