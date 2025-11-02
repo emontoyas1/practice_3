@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import messagebox
-from parse.CadenaFEN import parse_fen
+from src.parse.CadenaFEN import parse_fen
 
 # aqui ponemos como se ven las piezas
 PIEZAS_UNICODE = {
@@ -96,4 +96,11 @@ def main():
     ventana_principal.mainloop()
 
 if __name__ == "__main__":
+<<<<<<< HEAD
     main()
+=======
+    main()
+
+
+
+>>>>>>> c947579c736b06f108121274d9272d0a613a120e
