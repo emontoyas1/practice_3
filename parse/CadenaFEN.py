@@ -1,6 +1,15 @@
 import re
 from typing import List, Dict, Union, Tuple
 
+import re
+REGEX_RANK      = re.compile(r'^(?:[PNBRQKpnbrqk]|[1-8])+$')
+REGEX_SIDE      = re.compile(r'^[wb]$')
+REGEX_CASTLING  = re.compile(r'^-$|^[KQkq]{1,4}$')
+REGEX_ENPASSANT = re.compile(r'^-$|^[a-h][36]$')
+REGEX_HALF      = re.compile(r'^\d+$')
+REGEX_FULL      = re.compile(r'^[1-9]\d*$')
+
+
 # Backend del parser
 
 # expresion regular para validar caracteres permitidos en una fila FEN
