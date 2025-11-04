@@ -14,7 +14,7 @@ Este proyecto fue desarrollado como parte de la práctica final de la asignatura
 - Visualizar el estado del tablero mediante una interfaz gráfica
 - Proporcionar retroalimentación clara al usuario sobre errores de sintaxis
 
-## Autores 🚀
+## Autores 
 - Emmanuel Montoya
 - Miguel Angel Alzate
 
@@ -29,12 +29,12 @@ Este proyecto fue desarrollado como parte de la práctica final de la asignatura
 
 ## Ejemplos 
 
-### FEN Válida ✅
+### FEN Válida 
 ```
 2r3k1/p3bqp1/Q2p3p/3Pp3/P3N3/8/5PPP/5RK1 b - - 1 27
 ```
 
-### FEN Inválida (con error en el placement) ❌
+### FEN Inválida (con error en el placement) 
 ```
 2r3k1/p3bqp1/Q2p3p/3Pp3/P3C3/8/5PPP/5RK1 b - - 1 27
 ```

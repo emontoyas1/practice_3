@@ -29,6 +29,20 @@ class InterfazAjedrez:
         # boton para validar
         tk.Button(marco_entrada, text="Validar y pintar", command=self.validar_y_pintar).pack(side='left', padx=5)
 
+        # Marco para información del juego
+        marco_info = tk.Frame(marco_principal)
+        marco_info.pack(fill='x', pady=(0, 10))
+
+        # Labels para mostrar información
+        self.enroque_label = tk.Label(marco_info, text="Enroque: —")
+        self.enroque_label.pack(side='left', padx=5)
+
+        self.media_jugada_label = tk.Label(marco_info, text="Media jugada: —")
+        self.media_jugada_label.pack(side='left', padx=5)
+
+        self.jugada_completa_label = tk.Label(marco_info, text="Jugada completa: —")
+        self.jugada_completa_label.pack(side='left', padx=5)
+
         # donde se dibuja el tablero
         self.lienzo = tk.Canvas(marco_principal, width=400, height=400)
         self.lienzo.pack()
@@ -87,8 +101,15 @@ class InterfazAjedrez:
         if resultado["valid"]:
             self.dibujar_tablero_vacio()
             self.dibujar_piezas(resultado["board"])
+
+            # Actualizar la información del juego
+            meta = resultado["meta"]
+            self.enroque_label.config(text=f"Enroque: {meta['castling']}")
+            self.media_jugada_label.config(text=f"Media jugada: {meta['halfmove']}")
+            self.jugada_completa_label.config(text=f"Jugada completa: {meta['fullmove']}")
         else:
             messagebox.showerror("Cadena FEN invalida", "\n".join(resultado["errors"]))
+
 
 def main():
     ventana_principal = tk.Tk()
@@ -96,11 +117,4 @@ def main():
     ventana_principal.mainloop()
 
 if __name__ == "__main__":
-<<<<<<< HEAD
     main()
-=======
-    main()
-
-
-
->>>>>>> c947579c736b06f108121274d9272d0a613a120e
